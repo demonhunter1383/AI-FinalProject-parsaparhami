@@ -2,9 +2,7 @@ from sklearn.metrics import classification_report, confusion_matrix, roc_auc_sco
 
 
 def evaluate_model_performance(model, X_test, y_test):
-    """
-    ارزیابی جامع مدل و بازگرداندن معیارهای اصلی
-    """
+
     predictions = model.predict(X_test)
     probabilities = model.predict_proba(X_test)[:, 1]
 
